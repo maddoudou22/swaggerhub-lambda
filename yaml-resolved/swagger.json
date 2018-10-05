@@ -1,17 +1,31 @@
 ---
 swagger: "2.0"
 info:
+  description: "Gestion des applications Steam dont le prix doit être vérifié"
   version: "1.0.1"
   title: "Swagger 2.0 Lambda from Swagger-Hub"
 schemes:
 - "https"
 paths:
-  /:
+  /applications/:
     get:
+      summary: "Retourne la liste des applications Steam"
       produces:
       - "application/json"
       parameters: []
       responses:
         200:
-          description: "200 response"
+          description: "ok"
+  /applications/{id_produit}:
+    get:
+      summary: "Retourne une application Steam specifique"
+      parameters:
+      - name: "id_produit"
+        in: "path"
+        description: "L'identifiant de l'application a recuperer"
+        required: true
+        type: "integer"
+      responses:
+        200:
+          description: "ok"
 definitions: {}
