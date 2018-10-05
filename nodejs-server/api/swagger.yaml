@@ -2,7 +2,7 @@
 swagger: "2.0"
 info:
   version: "1.0.1"
-  title: "Swagger 2.0 Lambda from Swagger-Hub new"
+  title: "Swagger 2.0 Lambda from Swagger-Hub"
 schemes:
 - "https"
 paths:
