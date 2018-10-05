@@ -22,7 +22,7 @@ paths:
       parameters:
       - name: "id_produit"
         in: "path"
-        description: "L'identifiant de l'application a recuperer"
+        description: "Identifiant de l'application a recuperer"
         required: true
         type: "integer"
       responses:
