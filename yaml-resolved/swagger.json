@@ -16,6 +16,15 @@ paths:
       responses:
         200:
           description: "ok"
+          schema:
+            type: "object"
+            properties:
+              id_produit:
+                type: "integer"
+                example: 123456
+              phonetiqueAlexa:
+                type: "string"
+                example: "SuperHot"
   /applications/{id_produit}:
     get:
       summary: "Retourne une application Steam specifique"
@@ -28,4 +37,27 @@ paths:
       responses:
         200:
           description: "ok"
-definitions: {}
+          schema:
+            type: "object"
+            properties:
+              id_produit:
+                type: "integer"
+                example: 123456
+              phonetiqueAlexa:
+                type: "string"
+                example: "SuperHot"
+        400:
+          description: "L'identifiant produit spécifié est incorrect (doit être un\
+            \ nombre sur 6 charactères)."
+definitions:
+  inline_response_200:
+    properties:
+      id_produit:
+        type: "integer"
+        example: 123456
+      phonetiqueAlexa:
+        type: "string"
+        example: "SuperHot"
+    example:
+      phonetiqueAlexa: "SuperHot"
+      id_produit: 123456
